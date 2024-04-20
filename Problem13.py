@@ -14,9 +14,18 @@ def gen_nth_prime(nth_digit):
         flag = is_prime(i)
         if flag:
             no_primes += 1
-            if no_primes == nth_digit:
-                print(i)
-                break
+            if nth_digit % 100 // 10 == 1:
+                print(nth_digit, "th Prime:", i)
+            else:
+                if nth_digit % 10 == 1:
+                    print(nth_digit, "st Prime:", i)
+                elif nth_digit % 10 == 2:
+                    print(nth_digit, "nd Prime:", i)
+                elif nth_digit % 10 == 3:
+                    print(nth_digit, "rd Prime:", i)
+                else:
+                    print(nth_digit, "th Prime:", i)
+            break
         i += 1
 
 

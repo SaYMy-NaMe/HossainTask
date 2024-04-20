@@ -11,9 +11,9 @@ def main():
     number = int(input())
     flag = is_prime(number)
     if flag:
-        print(number, "is Prime")
+        print("Prime")
     else:
-        print(number, "is not Prime")
+        print("Not Prime")
 
 
 if __name__ == "__main__":

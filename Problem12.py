@@ -13,7 +13,12 @@ def generate_prime(number):
         flag = is_prime(i)
         if flag:
             primes.append(i)
-    print(primes)
+    print("Prime less than ", number, ":", end=" ")
+
+    # Prime Printing according to the Document
+    for i in range(0, len(primes) - 1):
+        print(primes[i], end=",")
+    print(primes[len(primes) - 1])
 
 
 def main():

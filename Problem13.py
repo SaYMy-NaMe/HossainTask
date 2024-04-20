@@ -7,18 +7,22 @@ def is_prime(number):
     return True
 
 
-def generate_prime(number):
-    primes = []
-    for i in range(1, number):
+def gen_nth_prime(nth_digit):
+    no_primes = 0
+    i = 1
+    while True:
         flag = is_prime(i)
         if flag:
-            primes.append(i)
-    print(primes)
+            no_primes += 1
+            if no_primes == nth_digit:
+                print(i)
+                break
+        i += 1
 
 
 def main():
-    number = int(input())
-    generate_prime(number)
+    nth_digit = int(input())
+    gen_nth_prime(nth_digit)
 
 
 if __name__ == "__main__":

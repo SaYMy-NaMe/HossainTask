@@ -1,7 +1,7 @@
 def sort(array, size):
     # performing bubble sort here
-    for i in range(size-1):
-        for j in range(i+1, size):
+    for i in range(size - 1):
+        for j in range(i + 1, size):
             if array[i] > array[j]:
                 # swapping two number without declaring third variable
                 array[j] = array[j] + array[i]
@@ -10,7 +10,7 @@ def sort(array, size):
 
 
 def main():
-    array = [10, 22, -5, 117, 0]
+    array = [10, 22, -5, 117, 0]  # You can change if you want to test
     size = len(array)
     sort(array, size)
     for i in range(size):
